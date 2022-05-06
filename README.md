@@ -106,3 +106,14 @@ const Button = (
 
 - 태그 열고 닫기 -> content와 props 담기 -> 끝!
 - 브라우저가 온전히 JSX 이해하는 것이 아니라 에러 발생 가능 -> Babel을 이용하여 변환
+
+### 2.6 JSX part Two
+
+- container의 createElement 바꿔주기
+  - Title이나 Button을 포함시키기 위해서는 함수로 만들어줘야함
+  - JSX를 return 해주는 형태로 작성
+  - 함수() => { return (JSX 내용) }
+
+**_컴포넌트의 첫 글자는 반드시 대문자! 그리고 함수 형태로!_**
+
+- 만약 소문자라면 React / JSX 는 HTML button 태그라고 생각하게 된다.
