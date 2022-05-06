@@ -1,4 +1,4 @@
-# ReactJS_movie
+# ReactJS_movie 🎬
 nomadcoders
 
 ## 2. The Basics of React
@@ -40,3 +40,24 @@ ReactDom.render(span, root);
 
 * 바닐라 JS = HTML 먼저 만들고 -> Javascript로 가져와서 -> HTML 수정
 * React JS = 모든 것이 Javascript로써 시작 -> HTML 업데이트
+
+### 2.3 Events in React
+
+```javascript
+const container = React.creatElement("div", null, [span, btn]);
+ReactDom.render(container, root);
+```
+
+* span, btn element 둘 다 render하고 싶은 경우에 array를 두어 사용
+
+```javascript
+const btn = React.creatElement("button",
+{
+    onClick: () => console.log('im clicked'),
+}, 
+"Click me")
+```
+
+* 저번 수업에서는 button에 property로 id / class name / style 줌
+    * 이번 수업에서는 event listener 등록하는 방법 다룸
+    * createElement -> HTML 태그 선택 -> event 등록
