@@ -203,3 +203,33 @@ const onChange = (event) => {
 ### 3.8 Recap
 
 ### 3.9 Final Practice and Recap
+
+### 4.0 Props
+
+- Props = 부모 컴포넌트로부터 자식 컴포넌트에 데이터를 보낼 수 있게 해주는 방법
+
+- style을 재사용하면서 텍스트를 설정/변경하도록 하고 싶을 때:
+  - 우리가 만들고 사용하는 모든 컴포넌트들은 () 괄호로 argument를 받음
+  - 첫번째 argument의 이름은 마음대로 지어줄 수 있다
+  - 어떤 prop이든 컴포넌트에 보내면 그것들은 그 컴포넌트 함수의 첫번째 argument 속으로 들어가게 된다
+
+```javascript
+//Btn({banana: "Save Change"})
+<Btn banana="Save Change" x={false} />;
+function Btn(props) {
+  //props는 우리가 넣은 모든 것들을 갖는 오브젝트!
+}
+```
+
+- props를 확인해보면 {banana: 'Save Changes', x: false} 가 들어가있다.
+
+```javascript
+<Btn banana="Save Change" x={false} />;
+function Btn({ banana }) {
+  {
+    banana;
+  }
+}
+```
+
+- 위 코드와 같이 props보다 shortcut를 자주 사용한다
