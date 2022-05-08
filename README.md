@@ -199,3 +199,5 @@ const onChange = (event) => {
 ### 3.6 State Practice part One
 
 ### 3.7 State Practice part Two
+
+### 3.8 Recap
