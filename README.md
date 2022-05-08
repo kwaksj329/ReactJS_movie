@@ -197,3 +197,5 @@ const onChange = (event) => {
 - target : 방금 바뀐 input
 
 ### 3.6 State Practice part One
+
+### 3.7 State Practice part Two
