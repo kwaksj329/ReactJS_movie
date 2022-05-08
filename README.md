@@ -260,3 +260,23 @@ const MemorizedBtn = React.memo(Btn);
 
 - 부모 컨포넌트가 state 변경이 있다면 모든 자식들 다시 그려짐 (re-render)
 - 추후에 어플리케이션이 느려지는 원인일 수 있으니 React Memo 기억해두기
+
+### 4.2 Prop Types
+
+- 예를 들어 prop에 전송하지 말아야할 것들을 전송하는 경우 / text prop에 다른 타입의 내용을 넘겨주는 경우
+
+```javascript
+Btn.propTypes = {
+  text: PropTypes.string,
+  fontSize: PropTypes.number,
+};
+```
+
+- **_PropType_** : 어떤 타입의 prop를 받고 있는지 체크해줌
+  - 위 코드 안에 prop 타입과 어떤 모양이어야 하는지를 작성
+
+```javascript
+function Btn({ text, fontSize = 14 }) {}
+```
+
+- fontSize가 존재하지 않는다면 (undefined) 14 기본값을 줌
