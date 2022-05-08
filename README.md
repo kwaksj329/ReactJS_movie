@@ -150,3 +150,16 @@ const [myFavFood, mySecondFavFood] = food;
 ```
 
 - 배열의 요소 쉽게 가져오는 방법!
+
+### 3.2 setState part Two
+
+```javascript
+const [counter, setCounter] = React.useState(0);
+const onClick = () => {
+  setCounter(counter + 1);
+};
+```
+
+- modifier 함수가 어떤 값을 받으면 그 값으로 업데이트하고 리렌더링을 일으킴
+
+### 3.3 Recap
