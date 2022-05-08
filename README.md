@@ -184,3 +184,16 @@ setCounter((current) => current + 1);
 - setCounter 안에 있는 함수가 무엇을 return 하던지 그게 새로운 state가 됨 (현재값을 바탕으로 state값이 변경됨)
 
 ### 3.5 Inputs and State
+
+```javascript
+const onChange = (event) => {
+  //console.log(event.target); -> input 불러옴
+  //console.log(event.target.input);
+  setMinutes(event.target.value);
+};
+```
+
+- native Javascript event : nativeEvent 보기
+- target : 방금 바뀐 input
+
+### 3.6 State Practice part One
