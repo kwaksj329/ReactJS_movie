@@ -160,6 +160,27 @@ const onClick = () => {
 };
 ```
 
-- modifier 함수가 어떤 값을 받으면 그 값으로 업데이트하고 리렌더링을 일으킴
+- setCounter 함수가 어떤 값을 받으면 그 값으로 업데이트하고 리렌더링을 일으킴
+
+- setCounter 함수를 이용해서 state를 바꾸면 그 컴포넌트가 재생성되고 코드가 새로운 값을 가지고 실행된다.
 
 ### 3.3 Recap
+
+### 3.4 State Functions
+
+- 우리가 이전에 작성했던 방법은 좋은 방법은 아님
+
+  - counter는 다른 곳에서 update 될 수 있음
+  - counter가 다른 곳에서 변경되어서 우리가 생각했던 값이 아닐 수도 있음
+
+- state를 바꾸는 2가지 방법
+  - setCounter를 이용해 값 변경해주기
+  - 이전 값을 바탕으로 현재 값을 설정하고 싶다면 setCounter에 함수를 넣는 방식 사용
+
+```javascript
+setCounter((current) => current + 1);
+```
+
+- setCounter 안에 있는 함수가 무엇을 return 하던지 그게 새로운 state가 됨 (현재값을 바탕으로 state값이 변경됨)
+
+### 3.5 Inputs and State
