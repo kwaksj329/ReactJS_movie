@@ -133,3 +133,20 @@ const Button = (
   - 다음에 렌더링 될 컴포넌트를 확인한다 (변경된 부분만 업데이트)
 
 ### 3.1 setState part One
+
+```javascript
+const data = React.useState();
+console.log(data);
+// 결과 : [undefined, f(함수)]
+```
+
+- 위 결과에서 undefined = data, 함수는
+  data를 바꿀 때 사용하는 함수
+- React.useState(0) 의 결과 : [0, f]
+
+```javascript
+const food = ["tomato", "potato"];
+const [myFavFood, mySecondFavFood] = food;
+```
+
+- 배열의 요소 쉽게 가져오는 방법!
