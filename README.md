@@ -233,3 +233,30 @@ function Btn({ banana }) {
 ```
 
 - 위 코드와 같이 props보다 shortcut를 자주 사용한다
+
+### 4.1 Memo
+
+- 부모 컨포넌트가 state를 변경할 때 어떤 일이 일어나는지?
+
+```javascript
+<Btn text={value} onClick={changeValue} />
+```
+
+- 첫번째 줄의 코드는 (커스텀 컴포넌트에 onClick을 넣은 경우) onClick이 단지 props 이름일 뿐이고, Btn 안으로 전달된다.
+- prop로 text, boolean 타입뿐만 아니라 함수도 전달할 수 있다.
+- HTML 요소 안에 onClick 을 넣는다면 이벤트 리스너가 된다.
+
+**_커스텀 컴포넌트에 무엇을 넣든 props가 되고, 실제 HTML 태그 안에 들어가지 않는다!_**
+
+- 부모 컴포넌트의 state가 변경될 때 그 안에 있는 모든 것들이 다시 그려진다 (re-render)
+- 따라서 다시 그려질 필요 없는 자식 컴포넌트도 다시 그려짐
+  - **_React Memo_**: prop가 변경되지 않는다면 이 컴포넌트가 다시 그려지는 것을 원치 않을 때 사용
+
+```javascript
+const MemorizedBtn = React.memo(Btn);
+<MemorizedBtn text={value} changeValue={changeValue} />
+<MemorizedBtn text="Continue" />
+```
+
+- 부모 컨포넌트가 state 변경이 있다면 모든 자식들 다시 그려짐 (re-render)
+- 추후에 어플리케이션이 느려지는 원인일 수 있으니 React Memo 기억해두기
