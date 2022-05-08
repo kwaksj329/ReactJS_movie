@@ -2,7 +2,7 @@
 
 nomadcoders
 
-## 2. The Basics of React
+## 2. THE BASICS OF REACT
 
 ### 2.1 Before React
 
@@ -117,3 +117,19 @@ const Button = (
 **_컴포넌트의 첫 글자는 반드시 대문자! 그리고 함수 형태로!_**
 
 - 만약 소문자라면 React / JSX 는 HTML button 태그라고 생각하게 된다.
+
+## 3. STATE
+
+### 3.0 Understanding State
+
+- state = 기본적으로 데이터가 저장되는 곳
+- 우리가 사용하는 counter 변수 -> state로 만들 수 있다.
+
+- 변수 JSX에 전달하는 방법: 중괄호 안에 변수 이름 담기
+- UI 업데이트(Rerendering) 하는 방법: ReactDOM.render() 재호출 -> 그렇게 좋은 방법이 아님!
+
+- React JS는 UI에서 바뀐 부분만 업데이트 해준다
+  - 이전에 렌더링된 컴포넌트는 어떤거였는지 확인하고,
+  - 다음에 렌더링 될 컴포넌트를 확인한다 (변경된 부분만 업데이트)
+
+### 3.1 setState part One
