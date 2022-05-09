@@ -280,3 +280,14 @@ function Btn({ text, fontSize = 14 }) {}
 ```
 
 - fontSize가 존재하지 않는다면 (undefined) 14 기본값을 줌
+
+### 4.3 Recap
+
+### 5.0 Introduction
+
+- `create-react-app`
+
+  - 개발 서버에 접근한다든가, 자동으로 새로고침을 시켜준다든가, 즉각적으로 어플리케이션 안에 CSS를 포함시켜 준다든가 하는 기능들이 있음
+  - 웹사이트를 publish 하는 명령어 존재: 코드 압축, 좀 더 빠르게 만듦
+
+- node.js 설치 -> npx create-react-app 플젝 이름 -> npm run
