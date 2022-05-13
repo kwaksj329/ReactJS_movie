@@ -350,3 +350,20 @@ function Hello() {
 
 - cleanup function: component가 destroy 될 때 실행되는 function
 - useEffect는 hiFn을 받고 이 hiFn을은 dependency가 변화할 때 호출되며 component가 파괴될 때 byFn을 실행하고 싶다면 그 byFn을 hiFn에서 return 해줘야함
+
+### 7.0 To Do List part One
+
+- 직접적으로 state 수정하지 않기, 함수 사용
+
+```javascript
+[6, food]
+// [2, Array(4)]
+[6, ...food]
+//[6, 1, 2, 3, 4]
+```
+
+- array를 직접적으로 수정하지 않으면서 setToDos로 array에 element를 추가하는 방법
+
+```javascript
+setToDos((currentArray) => [toDo, ...currentArray]);
+```
