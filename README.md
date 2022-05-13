@@ -291,3 +291,20 @@ function Btn({ text, fontSize = 14 }) {}
   - 웹사이트를 publish 하는 명령어 존재: 코드 압축, 좀 더 빠르게 만듦
 
 - node.js 설치 -> npx create-react-app 플젝 이름 -> npm run
+
+### 5.1 Tour of CRA
+
+```javascript
+import PropTypes from "prop-types";
+
+Button.PropTypes = {
+  text: PropTypes.string.isRequired,
+};
+```
+
+- CSS 사용: css 파일 작성 -> import -> 대신 모든 버튼들의 배경을 같은 색으로 만들어버림
+- `global CSS style X`: create-react-app으로 작업할 때의 포인트는 분할하고, 정복하기
+- Button.module.css 파일에 있는 .btn{}을 className으로 추가 가능
+- 다른 모듈 css에서 같은 class name을 사용해도 문제되지 않음 (HTML 내에서는 랜덤 방식으로 생성됨)
+
+### 6.0 Introduction
