@@ -386,3 +386,31 @@ setToDos((currentArray) => [toDo, ...currentArray]);
 ### 7.2 Coin Tracker
 
 - useEffect 안에서 json 파일 fetch 해서 map을 통해 보여주는 코드 작성
+
+### 7.3 Movie App part One
+
+```javascript
+useEffect(() => {
+  fetch(`https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year`)
+    .then((response) => response.json())
+    .then((json) => {
+      setMovies(json.data.movies);
+      setLoading(false);
+    });
+}, []);
+
+const getMovies = async () => {
+  const json = await (
+    await fetch(
+      `https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year`
+    )
+  ).json;
+  setMovies(json.data.movies);
+  setLoading(false);
+};
+useEffect(() => {
+  getMovies;
+}, []);
+```
+
+- fetch & then 대신에 async-await 더 많이 사용
