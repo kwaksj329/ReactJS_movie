@@ -333,3 +333,20 @@ useEffect(() => {
 - keyword가 변화할 때 코드 실행
 
 ### 6.3 Recap
+
+### 6.4 Cleanup
+
+- component가 destroy 될 때에도 코드를 실행할 수 있다!
+
+```javascript
+function Hello() {
+  useEffect(() => {
+    console.log("created :)");
+    return () => console.log("destoryed :(");
+  });
+  return <h1>Hello</h1>;
+}
+```
+
+- cleanup function: component가 destroy 될 때 실행되는 function
+- useEffect는 hiFn을 받고 이 hiFn을은 dependency가 변화할 때 호출되며 component가 파괴될 때 byFn을 실행하고 싶다면 그 byFn을 hiFn에서 return 해줘야함
