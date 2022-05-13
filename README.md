@@ -319,4 +319,17 @@ Button.PropTypes = {
   - 두번재 argument: 빈 array
   - component가 처음 render할 때 실행되고 다시는 실행되지 않을 function을 넣어줌
 
-###
+### 6.2 Deps
+
+- search keyword에 변화가 있을 때만 검색 API 이용 & counter가 변화할 때에도 검색하고 싶지는 않을 때!
+- 코드의 특정 부분만이 변화했을 때 원하는 코드들을 실행할 수 있는 방법? `useEffect`
+
+```javascript
+useEffect(() => {
+  console.log("SEARCH FOR", keyword);
+}, [keyowrd]);
+```
+
+- keyword가 변화할 때 코드 실행
+
+### 6.3 Recap
