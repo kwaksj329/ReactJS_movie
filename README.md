@@ -308,3 +308,15 @@ Button.PropTypes = {
 - 다른 모듈 css에서 같은 class name을 사용해도 문제되지 않음 (HTML 내에서는 랜덤 방식으로 생성됨)
 
 ### 6.0 Introduction
+
+- render될 때마다 반복실행되어도 괜찮은 코드가 있을 수 있음 vs component가 처음 render될 때만 코드가 실행되길 원할 수 있음 (다른 state변화에는 실행되지 않도록 함)
+  - API를 통해 데이터를 가져올 때: 첫번째 component render에서 API를 call하고, 이후 state 변화할 때 그 API에서 데이터를 또다시 가져오지 않기 위함
+
+### 6.1 useEffect
+
+- `useEffect` 함수
+  - 첫번째 argument: 우리가 딱 한번만 실행하고 싶은 코드
+  - 두번재 argument: 빈 array
+  - component가 처음 render할 때 실행되고 다시는 실행되지 않을 function을 넣어줌
+
+###
