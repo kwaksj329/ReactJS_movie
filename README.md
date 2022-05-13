@@ -384,3 +384,5 @@ setToDos((currentArray) => [toDo, ...currentArray]);
 - 같은 componet의 list를 render할 때 key라는 prop 넣어줘야함
 
 ### 7.2 Coin Tracker
+
+- useEffect 안에서 json 파일 fetch 해서 map을 통해 보여주는 코드 작성
