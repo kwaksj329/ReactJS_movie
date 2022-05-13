@@ -367,3 +367,20 @@ function Hello() {
 ```javascript
 setToDos((currentArray) => [toDo, ...currentArray]);
 ```
+
+### 7.1 To Do List part Two
+
+- state 수정 시
+
+  - 함수 안에 원하는 값 대입
+  - 함수 안에 함수 사용
+
+- `map` 함수
+
+  - map 안에 들어가는 함수는 array의 모든 item에 대해 실행됨
+  - 무엇을 return 하던지 간에 그 return 한 값이 새로운 array에 들어감
+  - map 함수의 첫번째 argument로 현재의 item 가져올 수 있음
+
+- 같은 componet의 list를 render할 때 key라는 prop 넣어줘야함
+
+### 7.2 Coin Tracker
