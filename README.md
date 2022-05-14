@@ -425,3 +425,33 @@ useEffect(() => {
   - 코드: 스크린(route) 단위로 생각해야함
 
 - App.js는 더이상 영화들을 보여주지 않고 router를 render하며, router는 URL을 보고있는 component
+
+### 7.5 React Router
+
+- react-router-dom 사용하기 위해 import
+
+```javascript
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/movie">
+          <Detail />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
+  );
+}
+```
+
+- Switch: Route 찾음, Route는 URL을 의미함
+
+- Browser Router: 보통의 웹사이트처럼 생김
+- Hash Router: localhost:3000/#/movie
+
+- 유저가 영화 제목을 클릭하면 Detail 스크린으로 가게 하고 싶은 경우
+  - Movie.js에서 a 태그의 href 속성 사용 시 문제점: 영화 제목 클릭하면 화면 전체가 재실행됨
+  - `Link`: 브라우저 새로고침 없이도 유저를 다른 페이지로 이동시켜주는 컴포넌트 (어디에서나 사용 가능)
