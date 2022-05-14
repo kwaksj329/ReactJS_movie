@@ -470,3 +470,12 @@ function App() {
 - build script 실행시 웹사이트의 production ready code 생성하게 됨
   - production ready: 코드가 압축되고 모든 것이 최적화 됨
   - npm run build -> build 폴더와 내용 생성됨
+
+### 7.8 Conclusions
+
+### 7.9 Styles
+
+### 7.10 Next Steps
+
+- Breaking Change: 버전을 업데이트하면서 코드가 깨져서 코드를 수정해야 하는 경우
+- React는 코드를 깨트리지 않고 새로운 기능을 업데이트하고 추가하기 때문에 breaking change가 없다
