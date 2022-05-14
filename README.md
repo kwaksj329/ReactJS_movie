@@ -414,3 +414,14 @@ useEffect(() => {
 ```
 
 - fetch & then 대신에 async-await 더 많이 사용
+
+### 7.4 Movie App part Two
+
+- key는 React.js에서만 map 안에서 component들을 render할 때 사용
+
+- `React Router`: 페이지 전환
+
+  - npm install react-router-dom
+  - 코드: 스크린(route) 단위로 생각해야함
+
+- App.js는 더이상 영화들을 보여주지 않고 router를 render하며, router는 URL을 보고있는 component
