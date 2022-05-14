@@ -455,3 +455,18 @@ function App() {
 - 유저가 영화 제목을 클릭하면 Detail 스크린으로 가게 하고 싶은 경우
   - Movie.js에서 a 태그의 href 속성 사용 시 문제점: 영화 제목 클릭하면 화면 전체가 재실행됨
   - `Link`: 브라우저 새로고침 없이도 유저를 다른 페이지로 이동시켜주는 컴포넌트 (어디에서나 사용 가능)
+
+### 7.6 Parameters
+
+- url의 id 부분에 오는 값이 어떤 값인지 확인하는 방법:
+  - `useParams`: url에 있는 변수값을 반환해주는 함수
+
+### 7.7 Publishing
+
+- `gh-pages`: (npm i gh-pages)
+
+  - 결과물을 github pages에 업로드 할 수 있게 해주는 패키지
+
+- build script 실행시 웹사이트의 production ready code 생성하게 됨
+  - production ready: 코드가 압축되고 모든 것이 최적화 됨
+  - npm run build -> build 폴더와 내용 생성됨
