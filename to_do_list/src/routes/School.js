@@ -1,11 +1,13 @@
 import Header from "../component/Header";
 import Contents from "../component/Contents";
+import Sidebar from "../component/Sidebar";
 
 function School() {
   return (
     <div>
       <Header />
-      <Contents />
+      <Sidebar />
+      <Contents title={"School TODOLIST 📚"} />
     </div>
   );
 }
