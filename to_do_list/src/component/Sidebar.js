@@ -24,7 +24,7 @@ const Sidebar = () => {
     >
       <Tabs
         value={value}
-        onChange={handleChange}
+        onChange={() => handleChange(value)}
         orientation="vertical"
         textColor="secondary"
         indicatorColor="secondary"

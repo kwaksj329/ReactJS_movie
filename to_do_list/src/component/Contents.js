@@ -25,9 +25,8 @@ const Contents = ({ title }) => {
     <Box
       sx={{
         p: 3,
-        position: "absolute",
-        marginLeft: "5px",
-        marginTop: "30px",
+        margin: "30px 0px 0px 0px",
+        padding: "0px 0px 0px 0px",
         display: "flex",
         width: "85vw",
         justifyContent: "center",
