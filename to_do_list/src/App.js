@@ -3,6 +3,7 @@ import Home from "./routes/Home";
 import School from "./routes/School";
 import Soma from "./routes/Soma";
 import Personal from "./routes/Personal";
+import React from "react";
 
 function App() {
   return (
