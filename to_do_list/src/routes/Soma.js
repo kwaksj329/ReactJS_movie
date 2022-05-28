@@ -20,7 +20,7 @@ function Home() {
           onChange={onChange}
           value={toDo}
           type="text"
-          placeholder="Write your to do..."
+          placeholder="Soma..."
         />
         <button>Add to DO</button>
       </form>
