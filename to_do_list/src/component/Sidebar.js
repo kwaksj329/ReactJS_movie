@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import { useState } from "react";
 
 const Sidebar = () => {
-  const [value, setValue] = useState("School");
+  const [value, setValue] = useState("one");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -30,9 +30,9 @@ const Sidebar = () => {
         indicatorColor="secondary"
         aria-label="secondary tabs example"
       >
-        <LinkTab label="School" href="/school" />
-        <LinkTab label="SWM" href="/soma" />
-        <LinkTab label="Personal" href="/personal" />
+        <LinkTab value="one" label="School" href="/school" />
+        <LinkTab value="two" label="SWM" href="/soma" />
+        <LinkTab value="three" label="Personal" href="/personal" />
       </Tabs>
     </Box>
   );
