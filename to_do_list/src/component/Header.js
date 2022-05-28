@@ -13,7 +13,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import Button from "@mui/material/Button";
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = ["AjouUniv", "SWM", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Header = () => {
@@ -27,8 +27,20 @@ const Header = () => {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (event) => {
     setAnchorElNav(null);
+  };
+
+  const handlemenulink = (event) => {
+    console.log(event.target.id);
+    let menuid = event.target.id;
+    if (menuid === "AjouUniv") {
+      window.open("https://eclass2.ajou.ac.kr/ultra/course");
+    } else if (menuid === "SWM") {
+      window.open("https://swmaestro.org/sw/main/main.do");
+    } else if (menuid === "Blog") {
+      window.open("https://blog.naver.com/kwaksj329");
+    }
   };
 
   const handleCloseUserMenu = () => {
@@ -55,7 +67,7 @@ const Header = () => {
               textDecoration: "none",
             }}
           >
-            LOGO
+            TODOLIST
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -89,7 +101,13 @@ const Header = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography
+                    id={page}
+                    textAlign="center"
+                    onClick={handlemenulink}
+                  >
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -111,13 +129,14 @@ const Header = () => {
               textDecoration: "none",
             }}
           >
-            LOGO
+            TODOLIST
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button
+                id={page}
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={(handleCloseNavMenu, handlemenulink)}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page}
