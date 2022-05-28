@@ -10,6 +10,7 @@ const Contents = ({ title }) => {
   const onChange = (event) => setToDo(event.target.value);
   const onSubmit = (event) => {
     event.preventDefault();
+
     if (toDo === "") {
       return;
     }
