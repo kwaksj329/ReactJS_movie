@@ -22,6 +22,10 @@ const Contents = ({ title }) => {
     setToDos((toDos) => toDos.filter((todo) => todo !== id));
   };
 
+  const onRemoveAll = (id) => {
+    setToDos([]);
+  };
+
   return (
     <Box
       sx={{
@@ -49,6 +53,9 @@ const Contents = ({ title }) => {
           />
           <Button variant="outlined" type="submit">
             ADD
+          </Button>
+          <Button variant="outlined" onClick={onRemoveAll}>
+            DELETE ALL
           </Button>
         </form>
         <hr />
